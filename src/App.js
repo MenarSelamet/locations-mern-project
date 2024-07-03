@@ -5,14 +5,10 @@ import NewPlaceForm from "./Pages/NewPlace/NewPlaceForm";
 import UpdatePlaceForm from "./Pages/UpdatePlace/UpdatePlaceForm";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import UserList from "./Components/User/UserList";
-
 
 function App() {
-  
   return (
     <div className="App">
-     <UserList/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/places" element={<Places />} />
