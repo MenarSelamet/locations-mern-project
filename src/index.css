@@ -2,3 +2,23 @@ body {
   margin: 0;
   background: #4d4d4d;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.smallerContainer {
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+}
