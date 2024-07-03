@@ -1,11 +1,11 @@
 import React from 'react'
 import './SideNav.css'
 
-const SideNav = () => {
+const SideNav = (props) => {
   return (
-    <div>
-      
-    </div>
+    <aside className='side-drawer'>
+      {props.children}
+    </aside>
   )
 }
 
