@@ -1,13 +1,10 @@
-import React from 'react'
-import './SideNav.css'
+import React from "react";
+import "./SideNav.css";
 
 const SideNav = (props) => {
   return (
-    <aside className='side-drawer'>
-      {props.children}
-    </aside>
-  )
-}
+    <aside className={props.nav ? "side-drawer" : ""}>{props.children}</aside>
+  );
+};
 
-export default SideNav
-
+export default SideNav;

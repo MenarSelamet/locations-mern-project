@@ -2,19 +2,40 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import SideNav from "../SideNav/SideNav";
-import "./Navbar.css";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import NavLinks from "../NavLinks/NavLinks";
+import "./Navbar.css";
+import "../NavLinks/NavLinks.css";
 
 const MainNavigation = () => {
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
   return (
     <>
-      <SideNav>
+      <SideNav nav={nav}>
         <nav className="main-navigation__drawer-nav">
-          <NavLinks />
+          <ul className="nav-links">
+            <li onClick={() => setNav(false)}>
+              <NavLink to="/"> All Users </NavLink>
+            </li>
+            <li onClick={() => setNav(false)}>
+              <NavLink to="/places"> My Places</NavLink>
+            </li>
+            <li onClick={() => setNav(false)}>
+              <NavLink to="/new"> Add Place</NavLink>
+            </li>
+            <li onClick={() => setNav(false)}>
+              <NavLink to="/auth"> Authenticate</NavLink>
+            </li>
+          </ul>
         </nav>
       </SideNav>
       <Header>
-        <button className="main-navigation__menu-btn">
+        <button onClick={handleNav} className="main-navigation__menu-btn">
           <span />
           <span />
           <span />
